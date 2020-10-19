@@ -1,0 +1,203 @@
+/* ------------------------------------------MENU STYLES------------------------------------------- */
+.menu-wrap {
+  width: 100%;
+  height: 130px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  font-family: "jetBrainsMono-Regular";
+  font-weight: 200;
+  border: 3px solid var(--color-rojo);
+}
+
+.item-logo img {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  width: 70px;
+  height: 70px;
+  color: var(--color-blanco);
+  font-size: 2em;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--color-rojo);
+}
+
+.toggler {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 37px;
+  right: 40px;
+  border: 20px solid var(--color-rojo);
+}
+
+.hamburger {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 37px;
+  right: 40px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border: 3px solid var(--color-rojo);
+}
+
+/* -------------------------------------Hamburger Line--------------------------------------- */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-plomo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* ------------------------------Hamburger Lines - Top & Bottom------------------------------------ */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 5px;
+  background: inherit;
+}
+
+/* --------------------------------------Moves Line Down------------------------------------------------- */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* --------------------------------------Toggler Animation-------------------------------------------------- */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+  background-color: var(--color-blanco);
+}
+
+/* ----------------------------------Turns Lines Into X---------------------------------------------- */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* ------------------------------------Rotate On Hover When Checked---------------------------------------------- */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* ----------------------------------------------Show Menu------------------------------------------------- */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--color-rojo);
+}
+
+.menu-wrap .menu > div {
+  background: var(--color-plomo);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+  border: 3px solid var(--color-rojo);
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border: 3px solid var(--color-rojo);
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: var(--color-blanco);
+  font-size: 2em;
+  padding: 1em;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+  color: var(--color-blanco);
+  font-family: "jetBrainsMono-Regular";
+}
+
+/*-------------------------------------CELULARES (320px - 480px)------------------------------------------------*/
+@media (max-width: 480px) {
+  .menu-wrap {
+    width: 100%;
+    height: 110px;
+    border: 3px solid var(--color-rojo);
+  }
+
+  .item-logo img {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .toggler {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    /*----menu----*/
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+}

@@ -1,0 +1,24 @@
+/* Selector Personalizado*/
+::selection {
+  background-color: var(--color-plomo);
+  color: var(--color-gris);
+}
+
+/* Scroll Personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--color-gris);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-plomo-alpha);
+  border-radius: 10px;
+  border-right: 3px solid var(--color-gris);
+}
+/* body {
+  overflow: scroll;
+  scrollbar-color: #4b4343 #afafaa;
+  scrollbar-width: auto;
+}
+ */
+

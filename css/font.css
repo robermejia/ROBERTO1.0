@@ -1,0 +1,11 @@
+/*-----------------------------------------------Fuente: JetBrain----------------------------------------*/
+@font-face {
+  font-family: "jetBrainsMono-Regular";
+  src: url(../font/JetBrainsMono-1.0.0/JetBrainsMono-Bold.ttf?#iefix)
+      format("embedded-opentype"),
+    url(../font/JetBrainsMono-1.0.0/JetBrainsMono-Regular.ttf)
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+

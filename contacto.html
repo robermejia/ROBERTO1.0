@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+
+  <!--------------------------------- SEO ----------------------------------->
+  <meta name="author" content="Roberto Mejía" />
+  <meta name="copyright" content="Roberto Mejía" />
+  <link rel="canonical" href="http://robertiño.com/contacto"/>
+  <meta name="robots" content= "index, follow">
+
+  <meta name="keywords" content="Roberto Mejía, Roberto Mejia, ROBERTO MEJIA, ROBERTO MEJÍA, roberto mejia, roberto mejía robertiño, Robertiño" />  
+  <meta name="description" content="Desarrollador frontend enfocado en escribir código limpio, elegante y eficiente. También soy diseñador UI con experiencia en crear interfaces funcionales.">
+
+  <meta http-equiv="cache-control" content="no-cache"/>
+  
+  <link rel="icon" href="img/monograma-dark.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/personalizado.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font.css">
+</head>
+
+<body>
+  
+  <header class="menu-wrap">
+    <div class="item-logo">
+      <a href="/">
+        <img src="img/monograma-dark.png" alt="logo">
+      </a>
+    </div>
+    
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+      <div></div>
+    </div>
+
+    <nav class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Sobre mí</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="main">
+    <section class="section-title">
+      <h2 class="section-title__title"> <span class="span">&lt</span> Contacto <span class="span">&gt</span></h2>
+      <p class="section-title__description">"Neque porro quisquam est qui dolorem <br> quia dolor sit amet,  consectetur, adipisci velit..."</p>
+    </section>
+
+    <section class="section-contact">
+      
+      <form action="php/correos.php" method="POST">
+        <div class="form">
+            <div class="grupo">
+                <input type="text" name="nombre" id="" required><span class="barra"></span>
+                <label>Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="email" name="email" id="" required><span class="barra"></span>
+                <label>Email</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="asunto" id="" required><span class="barra"></span>
+                <label>Asunto</label>
+            </div>
+            <div class="grupo">
+                <textarea name="mensaje" id="" rows="3" required></textarea><span class="barra"></span>
+                <label>Mensaje</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+    </section>
+  </main>
+
+  <footer class="pie-de-pagina">
+    <div class="pie-de-pagina__left">
+        <ul class="pie-de-pagina__ul">
+            <li class="pie-de-pagina__li"><a class="pie-de-pagina__li--a" href="/">Inicio</a></li>
+            <li class="pie-de-pagina__li">|<a class="pie-de-pagina__li--a" href="acerca"> Acerca</a></li>
+            <li class="pie-de-pagina__li">|<a class="pie-de-pagina__li--a" href="portafolio"> Portafolio</a></li>
+            <li class="pie-de-pagina__li">|<a class="pie-de-pagina__li--a" href="contacto"> Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="pie-de-pagina__right">
+        <p class="pie-de-pagina__right--p">© Copyright 2020 | by Roberto Mejía</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+  
+
