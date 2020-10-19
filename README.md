@@ -8,7 +8,7 @@ Faltan:
 - robot.txt
 - sitemap.xml
 - error 404
-- 
+
 ## Páginas
 - Home
 - About
